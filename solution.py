@@ -321,14 +321,6 @@ def intersection_finder(combined):
 
 
 def main(filename):
-	'''
-	# For debugging, will show the positive result
-	for pts in combined:
-		plt.imshow(img_bin)
-		plt.scatter(pts[0], pts[1])
-		
-	plt.show()
-	'''
 	combined = basic_detection(filename)
 	combined = intersection_finder(combined)
 	box_list = box_detector(combined)
